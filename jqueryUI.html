@@ -1,0 +1,68 @@
+<html>
+    <head>
+    <title>jQuery</title>
+    <script type="text/javascript" src="jquery-min.js"> </script>
+        <script src="jquery-ui/jquery-ui.js"></script>	
+        <link href="jquery-ui/jquery-ui.css" rel="stylesheet">
+        
+        <style type="text/css">
+    
+            #resizable{
+                width:150px;
+                height: 150px;
+                background-color: lightgreen;
+               
+                
+            }
+            #also{
+                width:150px;
+                height: 150px;
+                background-color: lightblue;
+                
+                
+            }
+        </style>
+    </head>
+    
+    <body>
+       
+        <div id="draggable1">Drag me horizontally!</div>
+        <br>
+       
+        <div id="draggable2">Move me Vertically!</div> 
+        <br>
+        
+        <div style="width:300px;height:200px;background-color:yellow"> 
+            <span>I'm stuck in the box!</span>
+        </div>
+        
+       
+        <div id="resizable">Resizable!!!</div>
+        
+        <div id="also"> Synchrinize resizable!!</div>
+
+        <script type="text/javascript">
+        
+       $( "#draggable1" ).draggable({axis: "y"});
+            
+       $( "#draggable2" ).draggable({axis: "x"});
+            
+       $("span").draggable({containment:"parent"});
+            
+      $( "#resizable" ).resizable({
+        grid:50, 
+        alsoResize:"#also",
+          resize:function(event,ui){
+          if($("#resizable").width()>300){
+          alert("big enough!");
+      }
+          
+          
+      }
+        });
+            
+     $("#also").resizable();
+            
+        </script>
+    </body>
+    </html>

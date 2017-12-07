@@ -1,0 +1,106 @@
+<html>
+<head>
+    <title>jQuery</title>
+    <script type="text/javascript" src="jquery-min.js"> </script>
+    <script src="jquery-ui/jquery-ui.js"></script>	
+        
+    <link href="jquery-ui/jquery-ui.css" rel="stylesheet">
+        
+        <style type="text/css">
+            #droppable{
+                width:300px;
+                height:200px;
+                background-color:yellow;
+            }
+            #draggable{
+                width:150px;
+                height:100px;
+                background-color:red;
+            }
+            
+        </style>
+</head>
+<body>
+    
+   
+        
+    
+    <div id="droppable"> 
+            <p>Large box<p>
+        </div>
+    
+        <div id="draggable">
+        <p>Small box</p>
+        </div>
+    
+    <div id="accordion">
+  <h3>Rich Dad Poor Dad </h3>
+  <div>
+    <p>
+    Rich Dad Poor Dad is a 1997 book written by Robert Kiyosaki and Sharon Lechter. It advocates the importance of financial literacy (financial education), financial independence and building wealth through investing in assets, real estate investing, starting and owning businesses, as well as increasing one's financial intelligence (financial IQ) to improve one's business and financial aptitude. Rich Dad Poor Dad is written in the style of a set of parables, ostensibly based on Kiyosaki's life.
+    </p>
+  </div>
+  <h3>Pride and Prejudice</h3>
+  <div>
+    <p>
+    The opening line of this classic novel, “It is a truth universally acknowledged that a single man in possession of a good fortune must be in want of a wife” is one of the most recognizable first lines of fiction. Yet Jane Austen’s most famous work is more than a comedy of manners about the marriage market and the maneuvers of navigating polite society in 19th-century England. Pride and Prejudice remains one of the most enduring works of English Literature not because we find such rewarding pleasure in watching sparks fly between Elizabeth Bennet and Mr. Darcy (though that’s certainly reason enough). Readers embrace the novel because Austen candidly captures the human character with all of its beauties and its imperfections. Pride and Prejudice is a novel about overcoming differences of cast and class, about learning to laugh at life even when it’s grossly unfair, and about recognizing that loving someone often means accepting them in spite of rather than because of who they are.
+    </p>
+  </div>
+  <h3>The Wonderful Wizard of Oz</h3>
+  <div>
+    <p>
+    A classic novel about adventure and magic, The Wonderful Wizard of Oz tells the story of what happens to little Dorothy Gale when she and her dog, Toto, are caught up in a cyclone and whisked away from their Kansas farm to find themselves in the land of Oz, where they meet a host of colorful characters including the Scarecrow, the Tin Woodsman, and the Cowardly Lion. Together they journey to the Emerald city to meet the celebrated Wizard in a quest for knowledge, love, courage, and a search for home. Immortalized in its famous adaptation starring Judy Garland, the novel is a heartwarming story about friendship and bravery, about appreciating what you have, and never forgetting that home is where your heart is.
+    </p>
+ 
+  </div>
+  <h3>The Fault in Our Stars</h3>
+  <div>
+    <p>
+    A Compelling, touching story, The Fault in Our Stars recounts the experiences of Hazel, a teenager with cancer, and the experiences of the other teens in her cancer support group. As together they share their fears and their joys, readers come to appreciate the fragility of life through these young voices whose lives are at once burning with intensity and flickering on the point of dying. Green captures the struggles of terminal illness with tenderness and amazing authenticity, reminding us that love, friendship, and faith transcend all, even death itself.
+    </p>
+  </div>
+</div>
+    
+     <ul id="sortable">
+  <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Lamborgini</li>
+  <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Bugatti</li>
+  <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>BMW</li>
+  <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Audi</li>
+  <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Benz</li>
+  <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Mclaren</li>
+  <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Dodge</li>
+</ul>
+    
+    
+    
+  
+         <script type="text/javascript">
+             
+             
+             $("#draggable").draggable();
+             $("#droppable").droppable({
+                 drop:function(event,ui){
+                     alert("Dropped!");
+                 }
+             });
+             
+             $( "#sortable" ).sortable();
+             $( "#sortable" ).disableSelection();
+             
+             $( "#accordion" ).accordion();
+             
+         </script>
+        
+        
+        
+        
+        
+        
+</body>
+</html>
+    
+    
+    
+    
+    
+   
